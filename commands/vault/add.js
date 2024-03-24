@@ -22,7 +22,7 @@ module.exports = {
                 .setDescription('what do you think of this image')
                 .setRequired(false)),
 	async execute(interaction) {
-        await interaction.deferReply();
+        await interaction.deferReply({ ephemeral: true });
         const vaulted = interaction.options.getString('vaulted');
         const tags = interaction.options.getString('tags') ?? 'No Tags';
         const image = interaction.options.getAttachment("image")
