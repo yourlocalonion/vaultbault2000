@@ -66,7 +66,7 @@ module.exports = {
 	            await interaction.editReply({ content: 'No option recieved, cancelling.', components: [] });
             }
         } else {
-            await interaction.reply({ content: "You must be an overseer to add to the vault!", ephemeral: true })
+            await interaction.editReply({ content: "You must be an overseer to add to the vault!", ephemeral: true })
         }
 	},  
 };
